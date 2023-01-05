@@ -10,6 +10,9 @@ import {
   ArrowForward,
   ArrowRight,
 } from "./heroElements";
+
+import {A, SPAN} from '../HeroSection/NBtn'
+
 import Video from "../../videos/video.mp4";
 import { Button } from "../HeroSection/buttonElement"
 const Hero = () => {
@@ -27,19 +30,22 @@ const Hero = () => {
         </HeroBg>
         <HeroContent>
           <HeroH1>Aavishkar</HeroH1>
-          <HeroP>
-            
-          </HeroP>
+          <HeroP></HeroP>
           <HeroBtnWrapper>
-            <Button
-              to="about"
-              onMouseEnter={onHover}
-              onMouseLeave={onHover}
-              primary="true"
-              dark="true"
-            >
-              Explore{hover ? <ArrowForward /> : <ArrowRight />}
-            </Button>
+            <A>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              About
+            </A>
+            <A>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              <SPAN></SPAN>
+              Events
+            </A>
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>

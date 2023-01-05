@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { BsPerson } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -95,7 +95,7 @@ const Navbar = ({ toggle }) => {
             </NavMenu>
             <NavBtn>
               <NavBtnLink to="/signin">
-                <BsPerson size={24} color="#000" />
+                <BsInstagram size={24} color="#d62976" />
               </NavBtnLink>
             </NavBtn>
           </NavbarContainer>
