@@ -17,25 +17,19 @@ const Sidebar = ({isOpen , toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink to="/about" onClick={toggle}>
             About
           </SidebarLink>
-          <SidebarLink to="discover" onClick={toggle}>
-            Discuss
+          <SidebarLink to="/dhishan" onClick={toggle}>
+            Dhishan
           </SidebarLink>
-          <SidebarLink to="about" onClick={toggle}>
-            Resources
+          <SidebarLink to="/events" onClick={toggle}>
+            Competition
           </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
-            LeaderBoard
-          </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
-            Contact
+          <SidebarLink to="contact" onClick={toggle}>
+            Contact us
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to="/signin">Profile</SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );

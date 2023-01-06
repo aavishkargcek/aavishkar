@@ -7,20 +7,14 @@ import {
   HeroH1,
   HeroP,
   HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
 } from "./heroElements";
 
 import {A, SPAN} from '../HeroSection/NBtn'
 
 import Video from "../../videos/video.mp4";
-import { Button } from "../HeroSection/buttonElement"
+import { Link } from "react-router-dom";
 const Hero = () => {
-  const [hover, setHover] = useState(false);
 
-  const onHover = () => {
-    setHover(!hover);
-  };
 
   return (
     <>
@@ -30,22 +24,26 @@ const Hero = () => {
         </HeroBg>
         <HeroContent>
           <HeroH1>Aavishkar</HeroH1>
-          <HeroP></HeroP>
+          <HeroP>Aavishakr is Nation level Technical synopsis</HeroP>
           <HeroBtnWrapper>
-            <A>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              About
-            </A>
-            <A>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              <SPAN></SPAN>
-              Events
-            </A>
+            <Link to="/about">
+              <A>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                About
+              </A>
+            </Link>
+            <Link to="events">
+              <A>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                <SPAN></SPAN>
+                Events
+              </A>
+            </Link>
           </HeroBtnWrapper>
         </HeroContent>
       </HeroContainer>

@@ -46,7 +46,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="about"
+                  to="/about"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -58,7 +58,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="discuss"
+                  to="/dhishan"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -70,34 +70,29 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="Resources"
+                  to="/events"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Tech-Expo
+                  Events
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="../Form/index.js"
+                  to="/contact"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Contact
+                  Contact us
                 </NavLinks>
               </NavItem>
             </NavMenu>
-            <NavBtn>
-              <NavBtnLink to="/signin">
-                <BsInstagram size={24} color="#d62976" />
-              </NavBtnLink>
-            </NavBtn>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
