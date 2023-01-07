@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from 'react';
 import {Container, Form, Button, FormGroup, Label, Collapse, Input, Row, Col, Card, CardBody, CardHeader, CardFooter} from "reactstrap";
 import { UserContext } from '../context/UserContext';
@@ -9,24 +8,26 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
-const SignIn = () => {
+
+const SignUp = () => {
 
   const context= useContext(UserContext);
   const[email, setEmail]=useState("");
   const[password, setPassword]=useState("");
 
-  // method (handleSignIn) to handle signup
+  // method (handleSignUp) to handle signup
   //firebase with some methods like .auth & another with we have passed state as email & pass
   // in then get email & pass from the setUser state and grab whole res object
   // pass callbaack in catch ( with err msg and toastify msg ) if signup failed
-const handleSignIn=()=>{
+
+const handleSignUp=()=>{
   firebase
   .auth()
-  .signInWithEmailAndPassword(email, password)
+  .createUserWithEmailAndPassword(email, password)
   .then(res=>{
     console.log(res)
     context.setUser({ email: res.user.email, uid: res.user.uid})
-    toast(` Welcome Back ${res.user.email}`, { type: "success" });
+    toast(` Account Succsefully created for ${res.user.email}`, { type: "success" });
   })
   .catch(error=>{
     console.log(error);
@@ -36,11 +37,11 @@ const handleSignIn=()=>{
 
 //method to actual SignUp
 const handleSubmit= e =>{
-  e.preventDefault()
-  handleSignIn();
+  e.preventDefault();
+  handleSignUp();
 }
 
-//if context.user having a unique id then redirect user to "/" else show the sign form
+//if context.user having a unique id then redirect user to "/" else form
 if(context.user?.uid){
   return <Navigate to="/" />
 }
@@ -51,7 +52,7 @@ return (
       <Col lg={6} className='offset-lg-3 mt-5'>
         <Card>
           <Form onSubmit={handleSubmit}>
-            <CardHeader className=''>SignIn here</CardHeader>
+            <CardHeader className=''>SignUp here</CardHeader>
             <CardBody>
               <FormGroup row>
                 <Label for='email' sm={3}>
@@ -86,7 +87,7 @@ return (
             </CardBody>
             <CardFooter>
               <Button type='submit' block color='primary'>
-                Sign In
+                Sign Up
               </Button>
             </CardFooter>
           </Form>
@@ -95,9 +96,7 @@ return (
     </Row>
   </Container>
 );
-
 };
 
-
-export default SignIn;
+export default SignUp;
 

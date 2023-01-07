@@ -14,7 +14,7 @@ const About = () => {
       {/* <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} /> */}
       {/* <Aboutus /> */}
-      <SignIn />
+in the about
     </>
   );
 }
