@@ -1,13 +1,15 @@
 import React from 'react'
-import { DContainer } from './DhishanElements'
+import { DContainer, Card, CardElements } from "./DhishanElements";
 const DhishanComp = () => {
   return (
     <>
-        <DContainer>
-            
-        </DContainer>
+      <DContainer>
+        <Card>
+          <CardElements>Hello World</CardElements>
+        </Card>
+      </DContainer>
     </>
-  )
+  );
 }
 
 export default DhishanComp

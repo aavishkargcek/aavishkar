@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Aboutus from '../components/About'
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
+import SignIn from '../components/SignIn/SignIn';
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,9 +11,10 @@ const About = () => {
   }
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <Aboutus />
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} /> */}
+      {/* <Aboutus /> */}
+      <SignIn />
     </>
   );
 }

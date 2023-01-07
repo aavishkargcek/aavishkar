@@ -11,7 +11,7 @@ import {
   ServicesH2,
   ServicesP,
 } from "./serviceElements";
-const services = () => {
+const Services = () => {
   return (
     <ServicesContainer id="services">
       <ServicesH1>Our Services</ServicesH1>
@@ -40,4 +40,4 @@ const services = () => {
   );
 };
 
-export default services;
+export default Services;
